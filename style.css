@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+header, section, footer {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+header {
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: #58a6ff;
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #8ab4f8;
+}
+
+section {
+  background-color: #161b22;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+section:hover,
+.div-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(88, 166, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #58a6ff;
+  background-color: #0f172a; /* optional slight color shift */
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+/* Skill icon layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 50px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.skill-icon {
+  position: relative;
+  font-size: 40px;
+  color: #c9d1d9;
+  transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Tooltip */
+.skill-icon::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #21262d;
+  color: #c9d1d9;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.skill-icon:hover::after {
+  opacity: 1;
+}
