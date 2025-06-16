@@ -31,7 +31,7 @@ http://svashitfprojectwebsite12025.s3-website-us-east-1.amazonaws.com
 ## 🧪 Project Structure
 
 portfolio/
-├── main.tf                   # 
+├── main.tf                   #
 ├── provider.tf               # 
 ├── variables.tf              # 
 ├── terraform.tfstate.backup  # 
